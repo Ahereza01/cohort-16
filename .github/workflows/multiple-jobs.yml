@@ -8,17 +8,14 @@ jobs:
   steps:
   - name: Run many steps
     run:
-      pwd
-      Is
-      echo "Hello Class"
+      echo "build job"
   
   test_job:
+    needs: build-job
     runs-on: ubuntu-latest
     steps:
     - name: Run the steps
       run:
-        pwd
-        Is
         echo "Running Tests" 
 
   deploy_job:
@@ -26,8 +23,6 @@ jobs:
     steps:
     - name: Run many tests
       run:
-        pwd
-        Is
         echo "Build Job" 
 
    
