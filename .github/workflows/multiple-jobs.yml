@@ -4,25 +4,22 @@ on: push
 
 jobs:
   build_job: 
-  runs-on: ubuntu-latest
-  steps:
-  - name: Run many steps
-    run:
-      echo "build job"
+   runs-on: ubuntu-latest
+   steps:
+   - name: Run many steps
+     run: echo "build job"
   
   test_job:
     needs: build-job
     runs-on: ubuntu-latest
     steps:
     - name: Run the steps
-      run:
-        echo "Running Tests" 
+      run: echo "Running Tests" 
 
   deploy_job:
     runs-on: ubuntu-latest
     steps:
     - name: Run many tests
-      run:
-        echo "Build Job" 
+      run: echo "Build Job" 
 
    
