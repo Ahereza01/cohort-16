@@ -10,7 +10,6 @@ jobs:
      run: echo "build job"
   
   test_job:
-    needs: build-job
     runs-on: ubuntu-latest
     steps:
     - name: Run the steps
@@ -20,6 +19,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Run many tests
-      run: echo "Build Job" 
+      run: echo "Deploy Job" 
 
    
